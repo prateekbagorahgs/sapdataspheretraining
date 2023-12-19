@@ -1,0 +1,103 @@
+{
+  "definitions": {
+    "LT_SALES_ORDER_ITEMS": {
+      "kind": "entity",
+      "elements": {
+        "SALESORDERID": {
+          "type": "cds.String",
+          "length": 20,
+          "@EndUserText.label": "SALESORDERID",
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "notNull": true,
+          "key": true
+        },
+        "SALESORDERITEM": {
+          "type": "cds.String",
+          "length": 10,
+          "@EndUserText.label": "SALESORDERITEM",
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "notNull": true,
+          "key": true
+        },
+        "PRODUCTID": {
+          "type": "cds.String",
+          "length": 10,
+          "@EndUserText.label": "PRODUCTID",
+          "@DataWarehouse.native.dataType": "NVARCHAR"
+        },
+        "NOTEID": {
+          "type": "cds.String",
+          "length": 10,
+          "@EndUserText.label": "NOTEID",
+          "@DataWarehouse.native.dataType": "NVARCHAR"
+        },
+        "CURRENCY": {
+          "type": "cds.String",
+          "length": 5,
+          "@EndUserText.label": "CURRENCY",
+          "@DataWarehouse.native.dataType": "NVARCHAR"
+        },
+        "GROSSAMOUNT": {
+          "type": "cds.Decimal",
+          "precision": 15,
+          "scale": 2,
+          "@EndUserText.label": "GROSSAMOUNT",
+          "@DataWarehouse.native.dataType": "DECIMAL"
+        },
+        "NETAMOUNT": {
+          "type": "cds.Decimal",
+          "precision": 15,
+          "scale": 2,
+          "@EndUserText.label": "NETAMOUNT",
+          "@DataWarehouse.native.dataType": "DECIMAL"
+        },
+        "TAXAMOUNT": {
+          "type": "cds.Decimal",
+          "precision": 15,
+          "scale": 2,
+          "@EndUserText.label": "TAXAMOUNT",
+          "@DataWarehouse.native.dataType": "DECIMAL"
+        },
+        "IETMATPSTATUS": {
+          "type": "cds.String",
+          "length": 1,
+          "@EndUserText.label": "IETMATPSTATUS",
+          "@DataWarehouse.native.dataType": "NVARCHAR"
+        },
+        "OPITEMPOS": {
+          "type": "cds.String",
+          "length": 10,
+          "@EndUserText.label": "OPITEMPOS",
+          "@DataWarehouse.native.dataType": "NVARCHAR"
+        },
+        "QUANTITY": {
+          "type": "cds.Integer",
+          "@EndUserText.label": "QUANTITY",
+          "@DataWarehouse.native.dataType": "INTEGER"
+        },
+        "QUANTITYUNIT": {
+          "type": "cds.String",
+          "length": 3,
+          "@EndUserText.label": "QUANTITYUNIT",
+          "@DataWarehouse.native.dataType": "NVARCHAR"
+        },
+        "EXPECTEDDELIVERYDATE": {
+          "type": "cds.Date",
+          "@EndUserText.label": "EXPECTEDDELIVERYDATE",
+          "@DataWarehouse.native.dataType": "DATE"
+        }
+      },
+      "@EndUserText.label": "LT_SALES_ORDER_ITEMS",
+      "@ObjectModel.modelingPattern": {
+        "#": "ANALYTICAL_FACT"
+      }
+    }
+  },
+  "version": {
+    "csn": "1.0"
+  },
+  "meta": {
+    "creator": "CDS Compiler v1.19.2"
+  },
+  "$version": "1.0"
+}

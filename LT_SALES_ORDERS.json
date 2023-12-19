@@ -1,0 +1,143 @@
+{
+  "definitions": {
+    "LT_SALES_ORDERS": {
+      "kind": "entity",
+      "elements": {
+        "SALESORDERID": {
+          "@EndUserText.label": "Sales order ID",
+          "type": "cds.String",
+          "length": 10,
+          "@DataWarehouse.native.dataType": "NVARCHAR",
+          "key": true,
+          "notNull": true
+        },
+        "CREATEDBY": {
+          "@EndUserText.label": "Created by",
+          "type": "cds.String",
+          "length": 10,
+          "@DataWarehouse.native.dataType": "NVARCHAR"
+        },
+        "CREATEDAT": {
+          "@EndUserText.label": "Created at date",
+          "type": "cds.Date",
+          "@DataWarehouse.native.dataType": "DATE"
+        },
+        "CHANGEDBY": {
+          "@EndUserText.label": "Changed by",
+          "type": "cds.String",
+          "length": 10,
+          "@DataWarehouse.native.dataType": "NVARCHAR"
+        },
+        "CHANGEDAT": {
+          "@EndUserText.label": "Changed at date",
+          "type": "cds.Date",
+          "@DataWarehouse.native.dataType": "DATE"
+        },
+        "FISCVARIANT": {
+          "@EndUserText.label": "Fiscal year variant",
+          "type": "cds.String",
+          "length": 2,
+          "@DataWarehouse.native.dataType": "NVARCHAR"
+        },
+        "FISCALYEARPERIOD": {
+          "@EndUserText.label": "Fiscal year period",
+          "type": "cds.String",
+          "length": 7,
+          "@DataWarehouse.native.dataType": "NVARCHAR"
+        },
+        "NOTEID": {
+          "@EndUserText.label": "Note ID",
+          "type": "cds.String",
+          "length": 10,
+          "@DataWarehouse.native.dataType": "NVARCHAR"
+        },
+        "PARTNERID": {
+          "@EndUserText.label": "Partner ID",
+          "type": "cds.String",
+          "length": 10,
+          "@DataWarehouse.native.dataType": "NVARCHAR"
+        },
+        "SALESORG": {
+          "@EndUserText.label": "Sales Organisation",
+          "type": "cds.String",
+          "length": 4,
+          "@DataWarehouse.native.dataType": "NVARCHAR"
+        },
+        "CURRENCY": {
+          "@EndUserText.label": "Currency key",
+          "type": "cds.String",
+          "length": 5,
+          "@DataWarehouse.native.dataType": "NVARCHAR"
+        },
+        "GROSSAMOUNT": {
+          "@EndUserText.label": "Gross amount",
+          "precision": 15,
+          "scale": 2,
+          "type": "cds.Decimal",
+          "@DataWarehouse.native.dataType": "DECIMAL",
+          "@AnalyticsDetails.measureType": {
+            "#": "BASE"
+          },
+          "@Aggregation.default": {
+            "#": "SUM"
+          }
+        },
+        "NETAMOUNT": {
+          "@EndUserText.label": "Net amount",
+          "precision": 15,
+          "scale": 2,
+          "type": "cds.Decimal",
+          "@DataWarehouse.native.dataType": "DECIMAL",
+          "@AnalyticsDetails.measureType": {
+            "#": "BASE"
+          },
+          "@Aggregation.default": {
+            "#": "SUM"
+          }
+        },
+        "TAXAMOUNT": {
+          "@EndUserText.label": "Tax amount",
+          "precision": 15,
+          "scale": 2,
+          "type": "cds.Decimal",
+          "@DataWarehouse.native.dataType": "DECIMAL",
+          "@AnalyticsDetails.measureType": {
+            "#": "BASE"
+          },
+          "@Aggregation.default": {
+            "#": "SUM"
+          }
+        },
+        "LIFECYCLESTATUS": {
+          "@EndUserText.label": "Life cycle status",
+          "type": "cds.String",
+          "length": 1,
+          "@DataWarehouse.native.dataType": "NVARCHAR"
+        },
+        "BILLINGSTATUS": {
+          "@EndUserText.label": "Billing status",
+          "type": "cds.String",
+          "length": 1,
+          "@DataWarehouse.native.dataType": "NVARCHAR"
+        },
+        "DELIVERYSTATUS": {
+          "@EndUserText.label": "Delivery status",
+          "type": "cds.String",
+          "length": 1,
+          "@DataWarehouse.native.dataType": "NVARCHAR"
+        }
+      },
+      "@EndUserText.label": "LT_SALES_ORDERS",
+      "@ObjectModel.modelingPattern": {
+        "#": "ANALYTICAL_FACT"
+      }
+    }
+  },
+  "version": {
+    "csn": "1.0"
+  },
+  "meta": {
+    "creator": "CDS Compiler v1.19.2"
+  },
+  "$version": "1.0"
+}
