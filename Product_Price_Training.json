@@ -1,0 +1,43 @@
+{
+  "definitions": {
+    "Product_Price_Training": {
+      "kind": "entity",
+      "@EndUserText.label": "Product Price Training",
+      "@ObjectModel.modelingPattern": {
+        "#": "DATA_STRUCTURE"
+      },
+      "@ObjectModel.supportedCapabilities": [
+        {
+          "#": "DATA_STRUCTURE"
+        }
+      ],
+      "elements": {
+        "Product_ID": {
+          "@EndUserText.label": "Product ID",
+          "type": "cds.String",
+          "length": 10,
+          "key": true,
+          "notNull": true
+        },
+        "Price": {
+          "@EndUserText.label": "Price",
+          "precision": 15,
+          "scale": 2,
+          "type": "cds.Decimal"
+        },
+        "Currency": {
+          "@EndUserText.label": "Currency",
+          "type": "cds.String",
+          "length": 10
+        }
+      }
+    }
+  },
+  "version": {
+    "csn": "1.0"
+  },
+  "meta": {
+    "creator": "CDS Compiler v1.19.2"
+  },
+  "$version": "1.0"
+}
